@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  services.orders.application.web:
+    image: ${DOCKER_REGISTRY-}servicesordersapplicationweb
+    build:
+      context: .
+      dockerfile: Services/Orders/src/Services.Orders.Application.Web/Dockerfile
+
+  services.products.application.web:
+    image: ${DOCKER_REGISTRY-}servicesproductsapplicationweb
+    build:
+      context: .
+      dockerfile: Services/Products/src/Services.Products.Application.Web/Dockerfile
+
