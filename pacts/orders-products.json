@@ -1,0 +1,35 @@
+{
+  "consumer": {
+    "name": "orders"
+  },
+  "provider": {
+    "name": "products"
+  },
+  "interactions": [
+    {
+      "provider_state": "Existing product",
+      "description": "A GET request to retrieve product details",
+      "request": {
+        "method": "GET",
+        "path": "/products/a150e15e-50fa-ea5e-f001-ba5eba11abba"
+      },
+      "response": {
+        "headers": {
+          "content-Type": "application/json"
+        },
+        "status": 200,
+        "body": {
+          "brand": null,
+          "name": null,
+          "ean": null,
+          "price": 0.0,
+          "inStock": false
+        }
+      }
+    }
+  ],
+  "options": {
+    "ignoreCasing": true,
+    "ignoreContractValues": true
+  }
+}

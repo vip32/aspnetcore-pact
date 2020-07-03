@@ -1,0 +1,22 @@
+@product_id = a150e15e-50fa-ea5e-f001-ba5eba11abba
+
+###################################################################################
+### API create new order                                                          #
+# @name create_order_request
+@order_id = {{create_order_request.response.body.$.id}}
+POST https://localhost:7101/orders HTTP/1.1
+Content-Type: application/json
+
+{
+    "customerId": "50daaced-ba55-50da-c01a-b1e55ed10c05"
+}
+
+###################################################################################
+### API get existing order                                                        #
+GET https://localhost:7101/orders/{{order_id}} HTTP/1.1
+Content-Type: application/json
+
+###################################################################################
+### API add product to existing order                                             #
+PUT https://localhost:7101/orders/{{order_id}}/products/{{product_id}}?quantity=1 HTTP/1.1
+Content-Type: application/json
