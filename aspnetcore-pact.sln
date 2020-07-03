@@ -15,17 +15,34 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{1C912578-6BD
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{8D69C9E9-F660-48B2-86C6-DE2C8549AA6F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services.Orders", "Services\Orders\src\Services.Orders\Services.Orders.csproj", "{C903D4A0-3B97-4464-AD90-7CFCEBE9CEAA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Services.Orders", "Services\Orders\src\Services.Orders\Services.Orders.csproj", "{C903D4A0-3B97-4464-AD90-7CFCEBE9CEAA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services.Products", "Services\Products\src\Services.Products\Services.Products.csproj", "{9F64881C-4FCF-4D12-BE4C-28959729ABD3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Services.Products", "Services\Products\src\Services.Products\Services.Products.csproj", "{9F64881C-4FCF-4D12-BE4C-28959729ABD3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services.Orders.Application.Web", "Services\Orders\src\Services.Orders.Application.Web\Services.Orders.Application.Web.csproj", "{5AB26504-D0A2-4F9C-B59A-A38A242BE2D5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Services.Orders.Application.Web", "Services\Orders\src\Services.Orders.Application.Web\Services.Orders.Application.Web.csproj", "{5AB26504-D0A2-4F9C-B59A-A38A242BE2D5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services.Products.Application.Web", "Services\Products\src\Services.Products.Application.Web\Services.Products.Application.Web.csproj", "{CB153D18-3429-4428-B700-31EAC73094DE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Services.Products.Application.Web", "Services\Products\src\Services.Products.Application.Web\Services.Products.Application.Web.csproj", "{CB153D18-3429-4428-B700-31EAC73094DE}"
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{C36E895A-AD93-48E5-958C-39D74FBBF8C5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "assets", "assets", "{73DCA878-ABB1-4525-BCB0-E0796D324E4D}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		Directory.Build.props = Directory.Build.props
+		README.md = README.md
+		REST.http = REST.http
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "services", "services", "{36FD9257-5294-4DF1-AAA1-233ACF643F6D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services.Products.PactTests", "Services\Products\tests\Services.Products.PactTests\Services.Products.PactTests.csproj", "{05B1C475-68F7-4040-AAB3-082B7B54941D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services.Orders.PactTests", "Services\Orders\tests\Services.Orders.PactTests\Services.Orders.PactTests.csproj", "{034A6336-7999-4CBB-8E07-16523DAC937A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "pacts", "pacts", "{2B23AB3F-EF6F-4E31-9E7D-A2944478A963}"
+	ProjectSection(SolutionItems) = preProject
+		pacts\orders-products.json = pacts\orders-products.json
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -53,6 +70,14 @@ Global
 		{C36E895A-AD93-48E5-958C-39D74FBBF8C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C36E895A-AD93-48E5-958C-39D74FBBF8C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C36E895A-AD93-48E5-958C-39D74FBBF8C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05B1C475-68F7-4040-AAB3-082B7B54941D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05B1C475-68F7-4040-AAB3-082B7B54941D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05B1C475-68F7-4040-AAB3-082B7B54941D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05B1C475-68F7-4040-AAB3-082B7B54941D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{034A6336-7999-4CBB-8E07-16523DAC937A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{034A6336-7999-4CBB-8E07-16523DAC937A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{034A6336-7999-4CBB-8E07-16523DAC937A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{034A6336-7999-4CBB-8E07-16523DAC937A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -60,6 +85,8 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{247BF9E4-FDD0-44DF-9CB6-1E091056EBD3} = {695ADE9E-3F00-48DB-A265-09A22F5A8DB1}
 		{7DF6F5E3-9EE7-40D4-AB75-D8E6FD5653CE} = {695ADE9E-3F00-48DB-A265-09A22F5A8DB1}
+		{695ADE9E-3F00-48DB-A265-09A22F5A8DB1} = {36FD9257-5294-4DF1-AAA1-233ACF643F6D}
+		{4F09A07D-23CD-45DC-9EBC-71A6CC257DBE} = {36FD9257-5294-4DF1-AAA1-233ACF643F6D}
 		{1C912578-6BDC-4E4E-ACC4-4DBC1313E2E8} = {4F09A07D-23CD-45DC-9EBC-71A6CC257DBE}
 		{8D69C9E9-F660-48B2-86C6-DE2C8549AA6F} = {4F09A07D-23CD-45DC-9EBC-71A6CC257DBE}
 		{C903D4A0-3B97-4464-AD90-7CFCEBE9CEAA} = {247BF9E4-FDD0-44DF-9CB6-1E091056EBD3}
@@ -67,6 +94,9 @@ Global
 		{5AB26504-D0A2-4F9C-B59A-A38A242BE2D5} = {247BF9E4-FDD0-44DF-9CB6-1E091056EBD3}
 		{CB153D18-3429-4428-B700-31EAC73094DE} = {1C912578-6BDC-4E4E-ACC4-4DBC1313E2E8}
 		{C36E895A-AD93-48E5-958C-39D74FBBF8C5} = {73DCA878-ABB1-4525-BCB0-E0796D324E4D}
+		{05B1C475-68F7-4040-AAB3-082B7B54941D} = {8D69C9E9-F660-48B2-86C6-DE2C8549AA6F}
+		{034A6336-7999-4CBB-8E07-16523DAC937A} = {7DF6F5E3-9EE7-40D4-AB75-D8E6FD5653CE}
+		{2B23AB3F-EF6F-4E31-9E7D-A2944478A963} = {73DCA878-ABB1-4525-BCB0-E0796D324E4D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E5C93E1E-E25C-4899-A911-5FC687B36B83}

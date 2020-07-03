@@ -12,4 +12,3 @@ services:
     build:
       context: .
       dockerfile: Services/Products/src/Services.Products.Application.Web/Dockerfile
-

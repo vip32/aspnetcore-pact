@@ -31,7 +31,7 @@ namespace Services.Orders.PactTests
                         .WithHeader("Content-Type", "application/json")
                         .WithStatusCode(HttpStatusCode.OK)
                         .WithBody<ProductDto>()))
-                .PublishedAsFile("../../../../../../../pacts")
+                .PublishedAsFile("../../../../../../../pacts") // TODO: docker based pact broker
                 .MakeAsync().ConfigureAwait(false);
         }
     }
